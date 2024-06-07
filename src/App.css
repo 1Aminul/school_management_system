@@ -12,6 +12,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.ql-editor{
+  min-height: 16em;
+  color: white;
+}
+.ql-toolbar{
+  background-color: white;
+}
 
 .App-header {
   background-color: #282c34;
@@ -27,6 +34,15 @@
 .App-link {
   color: #61dafb;
 }
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* body::-webkit-scrollbar{
+  width: 25px;
+  background-color: pink;
+} */
 
 @keyframes App-logo-spin {
   from {
