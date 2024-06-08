@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
                 {
                     path: '/dashboard/form/:id',
                     element: <AdmissionForm/>,
-                    loader: ({params})=> fetch(`http://localhost:5000/studentInfo/${params.id}`)
+                    loader: ({params})=> fetch(`https://school-management-server-xi.vercel.app/studentInfo/${params.id}`)
                 },
                 {
                     path: '/dashboard/promotion',
@@ -93,7 +93,7 @@ export const router = createBrowserRouter([
                 {
                     path: '/dashboard/about/:id',
                     element: <StudentDetails/>,
-                    loader: ({params})=> fetch(`http://localhost:5000/studentInfo/${params.id}`)
+                    loader: ({params})=> fetch(`https://school-management-server-xi.vercel.app/studentInfo/${params.id}`)
                     
                 },
                 {
@@ -115,12 +115,12 @@ export const router = createBrowserRouter([
                 {
                     path: '/dashboard/addteacher/:id',
                     element: <AddTeachers/>,
-                    loader: ({params})=> fetch(`http://localhost:5000/teacherInfo/${params.id}`)
+                    loader: ({params})=> fetch(`https://school-management-server-xi.vercel.app/teacherInfo/${params.id}`)
                 },
                 {
                     path: '/dashboard/teacherInfo/:id',
                     element: <TeacherDetails/>,
-                    loader: ({params})=> fetch(`http://localhost:5000/teacherInfo/${params.id}`)
+                    loader: ({params})=> fetch(`https://school-management-server-xi.vercel.app/teacherInfo/${params.id}`)
                     
                 },
                 // {

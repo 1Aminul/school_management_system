@@ -14,7 +14,7 @@ const Admin = () => {
   const { data: notice = [], refetch } = useQuery({
     queryKey: ["notice"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/notice`);
+      const res = await fetch(`https://school-management-server-xi.vercel.app/notice`);
       const data = await res.json();
       return data;
     },

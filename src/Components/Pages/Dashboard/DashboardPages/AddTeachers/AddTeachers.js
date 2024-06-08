@@ -48,7 +48,7 @@ const AddTeachers = () => {
                     joiningDate: data.joinDate,
                     id: id,
                 }
-                fetch(`http://localhost:5000/teacherInfo`, {
+                fetch(`https://school-management-server-xi.vercel.app/teacherInfo`, {
                     method: 'post',
                     headers: {
                         'content-type': 'application/json',
@@ -86,7 +86,7 @@ const AddTeachers = () => {
             section: data.section,
             religion: data.religion,
         }
-        fetch(`http://localhost:5000/teacherInfo/${teacher?._id}`, {
+        fetch(`https://school-management-server-xi.vercel.app/teacherInfo/${teacher?._id}`, {
             method: 'put',
             headers: {
                 'content-type': "application/json"

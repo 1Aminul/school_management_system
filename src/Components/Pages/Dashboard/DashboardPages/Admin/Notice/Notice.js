@@ -11,7 +11,7 @@ const Notice = () => {
   const { data: notice = [], refetch } = useQuery({
     queryKey: ["notice"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/notice`);
+      const res = await fetch(`https://school-management-server-xi.vercel.app/notice`);
       const data = await res.json();
       return data;
     },
@@ -32,7 +32,7 @@ const Notice = () => {
       date: `${date[2]} ${date[1]}, ${date[3]}`,
     };
     console.log(notice);
-    fetch(`http://localhost:5000/notice`, {
+    fetch(`https://school-management-server-xi.vercel.app/notice`, {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -50,7 +50,7 @@ const Notice = () => {
       .catch((error) => console.log(error));
   };
   const handlerDelete = (id)=> {
-    fetch(`http://localhost:5000/notice/${id}`, {
+    fetch(`https://school-management-server-xi.vercel.app/notice/${id}`, {
       method: "delete",
      
     })
@@ -65,7 +65,7 @@ const Notice = () => {
       .catch((error) => console.log(error));
   }
    const handlerPost = (id)=>{
-    fetch(`http://localhost:5000/notice/${id}`, {
+    fetch(`https://school-management-server-xi.vercel.app/notice/${id}`, {
       method: "put",
       headers: {
         "content-type": "application/json",

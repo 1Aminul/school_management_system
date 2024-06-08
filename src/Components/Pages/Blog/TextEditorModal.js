@@ -45,7 +45,7 @@ const TextEditorModal = () => {
             date: `${date[2]} ${date[1]}, ${date[3]}`,
         }
         console.log(blogPost)
-        fetch(`http://localhost:5000/blog`, {
+        fetch(`https://school-management-server-xi.vercel.app/blog`, {
             method: "post",
             headers: {
                 'content-type': 'application/json'

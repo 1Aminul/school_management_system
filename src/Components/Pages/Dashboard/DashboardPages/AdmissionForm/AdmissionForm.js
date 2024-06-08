@@ -60,7 +60,7 @@ const AdmissionForm = () => {
                 admitDate: date,
                 // id: id,
             }
-            fetch(`http://localhost:5000/studentInfo`, {
+            fetch(`https://school-management-server-xi.vercel.app/studentInfo`, {
                 method: 'post',
                 headers: {
                     'content-type': 'application/json',
@@ -96,7 +96,7 @@ const AdmissionForm = () => {
             section: data.section,
             religion: data.religion,
         }
-        fetch(`http://localhost:5000/studentInfo/${student?._id}`, {
+        fetch(`https://school-management-server-xi.vercel.app/studentInfo/${student?._id}`, {
             method: 'put',
             headers: {
                 'content-type': "application/json"

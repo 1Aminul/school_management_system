@@ -18,7 +18,7 @@ const Teachers = () => {
     const {data: Teachers=[], refetch} = useQuery({
         queryKey: ['Teachers'],
         queryFn: async ()=> {
-            const res = await fetch(`http://localhost:5000/teacherInfo`)
+            const res = await fetch(`https://school-management-server-xi.vercel.app/teacherInfo`)
             const data = await res.json();
             return data
         }
@@ -34,7 +34,7 @@ const Teachers = () => {
         },
     }
     const handleDelete= (id)=>{
-        fetch(`http://localhost:5000/studentInfo/${id}`,{
+        fetch(`https://school-management-server-xi.vercel.app/studentInfo/${id}`,{
             method: 'delete',
 
         }).then(res=> res.json())
